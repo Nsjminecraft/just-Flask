@@ -16,6 +16,13 @@
           <a class="shophead" href="/shop">Shop </a>
         </div>
       </div> 
+      {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
     <h1>Flask is Cool</h1>
     <p>Flask is a micro web framework for Python based on Werkzeug and Jinja 2. It is classified as a microframework because it does not require particular tools or libraries.</p>
     <p>lorum ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
