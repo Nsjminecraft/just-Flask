@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Flask website</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="logo" href="/logo">
+        <div class="header-right">
+          <a class="pageonehead" href="/">Page 1</a>
+          <a class="pagetwohead" href="/page2">Page 2</a>
+          <a class="pagethreehead" href="/page3">page 3</a>
+        </div>
+      </div> 
+    <h1>Flask is Cool</h1>
+    <p>Flask is a micro web framework for Python based on Werkzeug and Jinja 2. It is classified as a microframework because it does not require particular tools or libraries.</p>
+    <p>lorum ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+    <button class="button1page2" onclick="window.location.href='/page2'">page 2</button>
+    <button class="button1page3" onclick="window.location.href='/page3'">page 3</button>
+</body>
+</html>
